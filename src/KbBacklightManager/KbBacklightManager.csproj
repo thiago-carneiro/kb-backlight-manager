@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <RuntimeIdentifiers>win-x64;win-arm64</RuntimeIdentifiers>
+    <RootNamespace>KbBacklightManager</RootNamespace>
+    <AssemblyName>KbBacklightManager</AssemblyName>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ApplicationIcon>Assets\KbBacklightManager.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <!-- No culture data needed: the two languages are chosen from the Windows UI language -->
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <IsAotCompatible>true</IsAotCompatible>
+    <!-- dotnet publish compiles to native code (needs the Visual Studio C++ build tools):
+         one small executable, no .NET to install -->
+    <PublishAot Condition="'$(Configuration)' == 'Release'">true</PublishAot>
+    <OptimizationPreference>Size</OptimizationPreference>
+    <Deterministic>true</Deterministic>
+    <Version>1.0.0</Version>
+    <Product>KB Backlight Manager</Product>
+    <Copyright>Copyright 2026 The KB Backlight Manager authors. Licensed under the Apache License, Version 2.0.</Copyright>
+  </PropertyGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="KbBacklightManager.Tests" />
+  </ItemGroup>
+</Project>
