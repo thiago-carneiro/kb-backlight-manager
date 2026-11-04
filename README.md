@@ -14,9 +14,18 @@ It is a single 2.4 MB program with no window: about 4 MB of memory, and it stops
 
 Tested on a ThinkPad T14 Gen 2. The driver's interface is not documented; if it does not work on your model, please [open an issue](https://github.com/thiago-carneiro/kb-backlight-manager/issues) with the model name.
 
+## Download
+
+Get it from the [latest release](https://github.com/thiago-carneiro/kb-backlight-manager/releases/latest):
+
+- `KbBacklightManager-<version>-win-x64.exe` for most ThinkPads (Intel and AMD).
+- `KbBacklightManager-<version>-win-arm64.exe` for ThinkPads with Snapdragon processors (not yet tested on one).
+
+There is no installer: put the program in a folder of your choice and run it. It is not code-signed, so Windows may show a SmartScreen warning ("More info" → "Run anyway"), and Windows 11 may block it when Smart App Control is on. `SHA256SUMS.txt` in the release has the checksums.
+
 ## Using it
 
-Run `KbBacklightManager.exe`. Its icon, a keyboard with lit keys, appears in the notification area; click it for the menu:
+Run the program. Its icon, a keyboard with lit keys, appears in the notification area; click it for the menu:
 
 - **Keyboard backlight: High** — the level it keeps, the last one you chose with Fn+Space.
 - **Restore the backlight automatically** — turn the restoring on or off.
